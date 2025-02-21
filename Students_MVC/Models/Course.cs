@@ -12,7 +12,7 @@ namespace Students_MVC.Models
         public int DepartmentId { get; set; }
 
         public Department? Department { get; set; }
-        public ICollection<CrsResult>? CrsResults { get; set; } = new HashSet<CrsResult>();
+        public List<CrsResult>? CrsResults { get; set; } = [];
         public ICollection<Instructor>? Instructors { get; set; } = new HashSet<Instructor>();
     }
 }

@@ -5,8 +5,8 @@ namespace Students_MVC.Models
     public class Instructor
     {
         public int Id { get; set; }
-        public string InstructorName { get; set; }
-        public string Image { get; set; }
+        public string? InstructorName { get; set; }
+        public string? Image { get; set; }
         public int Salary { get; set; }
         [ForeignKey("Department")]
         public int DepartmentId { get; set; }
