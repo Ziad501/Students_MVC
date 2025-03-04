@@ -1,0 +1,24 @@
+﻿@model StudentResults
+@{
+    ViewData["Title"] = "GetStudentById";
+}
+
+<h1>GetStudentById</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr style="color: @(Model.Marks > 60 ? "green" : "red")">
+            <th scope="row">@Model.StudentId</th>
+            <td>@Model.StudentName</td>
+            <td>@Model.Subject</td>
+            <td>@Model.Marks</td>
+        </tr>
+    </tbody>
+</table>
