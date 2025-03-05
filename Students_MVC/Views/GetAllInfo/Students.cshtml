@@ -1,0 +1,27 @@
+﻿@model List<StudentResults>
+@{
+    ViewData["Title"] = "Students";
+}
+
+<h1>Students</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Subject</th>
+            <th scope="col">Marks</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var student in Model)
+        {
+            <tr style="color: @(student.Marks > 60 ? "green" : "red")">
+                <th scope="row">@student.StudentId</th>
+                <td>@student.StudentName</td>
+                <td>@student.Subject</td>
+                <td>@student.Marks</td>
+            </tr>
+        }
+    </tbody>
+</table>
